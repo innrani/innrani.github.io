@@ -1,0 +1,118 @@
+
+h2.subtitulo {
+    color: #f0f0f0; /* Cor específica para h2 nesta página */
+    margin-top: 20px; /* Ajusta a margem superior */
+    margin-bottom: 20px; /* Ajusta a margem inferior */
+    font-size: 1.6em; /* Tamanho da fonte */
+    border-bottom: 2px solid #f0f0f0; /* Linha de divisão */
+    padding-bottom: 10px; /* Espaço abaixo do h2 */
+    padding-top: 0px; /* Espaço acima do h2 */
+    text-align: center; /* Alinha o texto ao centro */
+}
+header h2.subtitulo {
+    margin-top: -10px; /* Espaçamento superior */
+    font-size: 1.7em; /* Tamanho da fonte do subtítulo */
+    color: #f0f0f0; /* Cor do texto do subtítulo */
+}
+header h1, header h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+}
+
+nav {
+    display: flex;               /* Configura o contêiner como flexível */
+    justify-content: center;     /* Centraliza os itens horizontalmente */
+    align-items: center;         /* Alinha os itens verticalmente */
+    padding: 5px;               /* Adiciona espaçamento interno, se necessário */
+    margin: 0 auto;  
+    margin-bottom: -60px;  
+    margin-left: -50px; 
+    margin-right: -50px;         /* Centraliza o nav horizontalmente */
+    width: 110%;                  /* Define a largura como 100% do contêiner pai */
+    box-sizing: border-box;      /* Inclui padding e bordas na largura total */
+    background-color: #000;      /* Cor de fundo para contraste */
+}
+
+nav ul {
+    list-style-type: none;        /* Remove os marcadores da lista */
+    padding: -70px;                   /* Remove o padding padrão */
+    margin-top: 5px;                    /* Remove a margem padrão */
+    margin-bottom: 9px;
+    display: auto;                /* Usa flexbox para alinhar os itens */
+    gap: 140px;                    /* Espaçamento entre os itens da lista */
+    height: 100%;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav ul li:not(:last-child)::after {
+    content: '';            /* Cria um conteúdo vazio para o divisor */
+    position: static;     /* Posiciona o divisor */
+    right: -50px;           /* Ajusta a posição à direita dos itens */
+    top: 50%;               /* Centraliza verticalmente */
+    transform: translateY(-10%); /* Alinha verticalmente */
+    width: 1px;             /* Largura do divisor */
+    height: 20px;           /* Altura do divisor */
+    background-color: #ffffff; /* Cor do divisor */
+}
+nav ul li a {
+    text-decoration: none;        /* Remove o sublinhado dos links */
+    color: #fff;                  /* Cor padrão dos links */
+    font-weight: bold;            /* Negrito para os links */
+    font-size: 1.2em;             /* Tamanho da fonte dos links */
+    transition: color 0.3s ease;  /* Transição suave para a cor */
+    margin-top: 10px; /* Ajuste a margem superior */
+    margin-bottom: 10px; /* Ajuste a margem inferior */
+
+}
+
+nav ul li a:hover {
+    color: #e6b3ed;               /* Cor dos links ao passar o mouse */
+}
+
+/* Estilo específico para os links na página de músicas */
+.pagina-musicas a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: #fffcfc; /* Cor dos links na página de músicas */
+}
+
+.pagina-musicas a:hover {
+    color: #3b2442; /* Cor dos links ao passar o mouse */
+}
+
+/* Ajustes para a lista de músicas */
+.pagina-musicas ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 40px;
+}
+
+.pagina-musicas li {
+    margin-bottom: 500px; /* Espaçamento entre os itens da lista */
+}
+
+.pagina-musicas iframe {
+    margin-top:500px; 
+    margin-bottom: 70px; /* Espaçamento inferior para os iframes */
+    border-radius: 12px; /* Bordas arredondadas para os iframes */
+    width: 100%; /* Ajusta a largura dos iframes */
+    height: 352px; /* Altura dos iframes */
+}
+
+/* Ajustes para o parágrafo */
+.pagina-musicas p {
+    font-size: 1.2em; /* Tamanho da fonte dos parágrafos na página de músicas */
+    line-height: 1.6; /* Altura da linha para parágrafos */
+}
+
+
+/* Fonte e tamanho do corpo do texto */
+p, li {
+    font-family: 'Georgia', serif; /* Substitua pelo nome da fonte desejada */
+    font-size: 1.2em; /* Tamanho do texto (ajuste conforme necessário) */
+}
+
+
+

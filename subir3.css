@@ -1,0 +1,14 @@
+@keyframes slideOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(100px); /* Sai para baixo */
+    }
+}
+
+.fade-out {
+    animation: slideOutDown 0.6s ease-in-out;
+}

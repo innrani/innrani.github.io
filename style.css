@@ -1,0 +1,305 @@
+/* Contêiner principal */
+.container {
+    width: 80%;              /* Define a largura do contêiner como 80% da largura da tela */
+    max-width: 1300px;       /* Define uma largura máxima para o contêiner */
+    max-height: fit-content;
+    margin: 0 auto;          /* Centraliza o contêiner horizontalmente */
+    padding: 20px;           /* Adiciona preenchimento interno ao contêiner */
+    background-color: #ffffff;  /* Cor de fundo do contêiner */
+    border: 1px solid #6e6e6e; /* Borda ao redor do contêiner */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do contêiner */
+    border-radius: 8px; /* Bordas arredondadas */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens dentro do contêiner quebrem linha se necessário */
+    height: auto;
+}
+
+
+.informacoes {
+    flex: 2; /* Ocupa duas frações do espaço disponível */
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Divide as imagens em três colunas */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* Corpo da página */
+body {
+    font-family: 'Georgia', sans-serif; 
+    background-color: #bfbbbb;
+    color: #6d6b6b;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+/* Imagem centralizada */
+.imagem-centralizada {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.imagem-centralizada img {
+    max-width: 100%; /* Ajuste a largura da imagem */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.imagem-centralizada figcaption {
+    font-size: 0.8em; /* Ajuste o tamanho da fonte da legenda */
+    color: #787777;
+    margin-top: 4px;
+}
+/* Adicione ou ajuste a margem para a classe da imagem */
+.imagem-grande {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 20px 0; /* Adiciona 20px de margem acima e abaixo da imagem */
+}
+
+
+header {
+    width: 100%;
+    background: url(https://imgur.com/JKalcQN.jpg) no-repeat center center; /* Adicione a URL da imagem */
+    position: relative;
+    background-size: cover; /* Ajusta a imagem de fundo para cobrir o cabeçalho */
+    color: #fff; /* Cor do texto branca para contraste */
+    padding:60px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    border-bottom: 4px solid #000000; /* Borda inferior escura */
+    box-shadow: 0 4px 8px rgba(239, 236, 236, 0.2); /* Sombra suave ao redor do cabeçalho */
+    border-radius: 10px; /* Borda arredondada do cabeçalho */
+    box-sizing: border-box;
+    min-height: 300px;
+}
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 11, 12, 0.4); /* Cor azul escura com transparência (rgba) */
+    z-index: 1; /* Garante que a sobreposição esteja acima da imagem de fundo */
+}
+
+header * {
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo do cabeçalho fique acima da sobreposição */
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-family: 'Georgia', sans-serif;
+    font-size: 400%;
+    color: #ebe8e8; 
+    margin-bottom: 14px;
+    text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000; /* Cria o contorno ao redor das letras */
+    
+}
+
+header h2.subtitulo {
+    margin-top: 1px; /* Espaçamento superior */
+    font-size: 1.7em; /* Tamanho da fonte do subtítulo */
+    color: #f0f0f0; /* Cor do texto do subtítulo */
+}
+header h1, header h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+}
+h1, h2 {
+    font-family: 'Georgia', sans-serif;
+    color: #333;
+    font-weight: normal;
+}
+
+
+/* Navegação */
+nav {
+    background-color: #000000; /* Cor de fundo do nav */
+    padding: 20px ;       
+    width: 100%;
+    display: flex;     
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;         /* Remove marcadores da lista */
+    padding: 0;               /* Remove preenchimento */
+    margin: 0;                /* Remove margem */
+    display: flex;            /* Usa flexbox para alinhar itens */ 
+    gap: 300px; 
+}
+nav ul li {
+    position: relative; /* Para usar se você precisar adicionar um divisor */
+}
+
+nav ul li:not(:last-child)::after {
+    content: '';            /* Cria um conteúdo vazio para o divisor */
+    position: relative;     /* Posiciona o divisor */
+    right: -50px;           /* Ajusta a posição à direita dos itens */
+    top: 50%;               /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Alinha verticalmente */
+    width: 1px;             /* Largura do divisor */
+    height: 20px;           /* Altura do divisor */
+    background-color: #ffffff; /* Cor do divisor */
+}
+
+nav ul li a {
+    text-decoration: none;    /* Remove o sublinhado dos links */
+    color: #ffffff;           /* Cor padrão dos links */
+    font-weight: bold;        /* Negrito para os links */
+    font-size: 1.2em;         /* Tamanho da fonte dos links */
+    transition: color 0.3s ease; /* Transição suave para a cor */
+}
+
+nav ul li a:hover {
+    color: #e6b3ed;           /* Cor dos links ao passar o mouse */
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.artigo h2 {
+    font-family: 'Georgia', sans-serif;
+    color: #000000;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    font-size: 40px;
+}
+.artigo h1 {
+    font-family: 'Georgia', sans-serif;
+    color: #000000;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    font-size: 40px;
+}
+
+.artigo-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #000000; 
+    color: #ffffff;           
+    border: 2px solid #fddae5; 
+    padding: 10px 20px;
+    margin: 20px auto;        
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    display: block;  
+}
+
+button:hover {
+    background-color: #9ab3f5; 
+    border-color: #8a9fd4;   
+}
+
+a {
+    color: rgb(193, 98, 241); /* Herda a cor do texto ao redor */
+    text-decoration: underline; /* Remove o sublinhado padrão */
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove preenchimento */
+    display: inline; /* Garante que o link se comporte como um texto em linha */
+}
+
+a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    color: #ff0000; /* Cor azul ao passar o mouse */
+}
+
+.negrito-sublinhado {
+    font-weight: bold; /* Deixa o texto em negrito */
+    text-decoration: underline; /* Adiciona o sublinhado */
+  }
+  
+
+.video-container {
+    display: flex;
+    float: left; /* Alinha o vídeo à esquerda */
+    margin-right: 20px; /* Espaçamento à direita do vídeo para o texto não colar */
+    margin-bottom: 50px; /* Espaçamento abaixo do vídeo para não colar no texto abaixo */
+}
+
+.video-container iframe {
+    width: 400px; /* Ajuste a largura do vídeo conforme necessário */
+    height: 200px; /* Ajuste a altura do vídeo conforme necessário */
+    border: none;
+}
+    .video-container2 {
+        float:right;
+        margin-right: 20; /* Espaçamento à direita do vídeo para o texto não colar */
+        margin-bottom: 20px; /* Espaçamento abaixo do vídeo para não colar no texto abaixo */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .video-container2 iframe {
+        width: 400px; /* Ajuste a largura do vídeo conforme necessário */
+        height: 200px; /* Ajuste a altura do vídeo conforme necessário */
+        border: none;
+    }
+ 
+
+.imagem-descricao img {
+    max-width: 300px; /* Ajuste o tamanho máximo da imagem */
+    height: auto;
+    border-radius: 8px; /* Arredonda as bordas da imagem */
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+.imagem-descricao figcaption {
+    font-size: 1.1em; /* Ajuste o tamanho da fonte da legenda */
+    color: #666; /* Cor da descrição */
+    margin-top: 10px;
+}
+p {
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-bottom: 2px 0; /* Ajuste esse valor para reduzir o espaço entre os parágrafos */
+}
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px); /* Começa 100px abaixo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Termina na posição normal */
+    }
+}
+
+.fade-in-up {
+    animation: slideInUp 0.6s ease-in-out; /* Aplica a animação ao elemento com essa classe */
+}
